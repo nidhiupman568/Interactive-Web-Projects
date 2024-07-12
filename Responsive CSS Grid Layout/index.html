@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <style>
+        body {
+            margin: 40px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .wrapper {
+            background-color: #eeeeee;
+            color: #444;
+            padding: 10px;
+            margin: auto;
+            display: grid;
+            grid-gap: 1em;
+            grid-template-areas:
+                "header" "sidebar" "content" "footer";
+        }
+
+        @media only screen and (min-width: 500px) {
+            .wrapper {
+                grid-template-columns: 20% auto;
+                grid-template-areas:
+                    "header   header" "sidebar  content" "footer   footer";
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .wrapper {
+                grid-gap: 20px;
+                grid-template-columns: 120px auto;
+                grid-template-areas:
+                    "header  header" "sidebar content" "footer  footer";
+                max-width: 600px;
+            }
+        }
+
+        .box {
+            background-color: #444;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .header,
+        .footer {
+            background-color: blue;
+        }
+
+        .sidebar {
+            background-color: #ccc;
+            color: #444;
+        }
+
+        .content {
+            background: rgb(16, 160, 179);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box header">Header</div>
+        <div class="box sidebar">Sidebar</div>
+        <div class="box content">
+            Content
+
+        </div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+
+</html>

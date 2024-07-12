@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/* This class is defining the
+styling for a grid container. */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* This class is defining the styling 
+for the container element that holds each
+testimonial in a testimonial grid. */
+.testimonial-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* This class is defining the 
+styling for the avatar image */
+.testimonial-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    margin-bottom: 20px;
+}
+
+.testimonial-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.testimonial-role {
+    font-size: 16px;
+    color: #666666;
+}
+
+/* This media query in CSS that targets 
+screens with a maximum width of 600 pixels. */
+@media screen and (max-width: 600px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,76 @@
+/* style.css */
+.img_div { 
+	height: 100px; 
+	width: 500px; 
+	border-radius: 40px; 
+	transition: 0.5s ease-in-out; 
+	border: 5px solid rgb(243, 235, 235); 
+	background-repeat: repeat; 
+	background-size: contain; 
+} 
+
+#div1 { 
+	background-image: url( 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231017114110/WEB-DESIGN-copy.webp"); 
+} 
+
+#div2 { 
+	background-image: url( 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231009173643/Best-UIUX-Practices-copy.webp"); 
+} 
+
+#div3 { 
+	background-image: url( 
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230318230239/Python-Data-Science-Tutorial.jpg"); 
+} 
+
+img { 
+	height: 100px; 
+	width: 500px; 
+	border-radius: 40px; 
+	opacity: 0.7; 
+} 
+
+.img_div:hover { 
+	height: 300px; 
+	width: 700px; 
+	opacity: 0.9; 
+	border: 6px solid rgb(176, 176, 189); 
+	cursor: pointer; 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+} 
+
+.img_box { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: 98vh; 
+	flex-direction: column; 
+	flex-wrap: wrap; 
+	gap: 30px; 
+	margin-top: -200px; 
+} 
+
+.title-a { 
+	font-size: 30px; 
+	text-align: center; 
+} 
+
+.gfg { 
+	color: green; 
+	font-weight: 700; 
+	font-size: 60px; 
+} 
+
+body { 
+	background-color: rgb(229, 215, 241); 
+} 
+
+.box1 { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: 100vh; 
+	flex-direction: column; 
+}

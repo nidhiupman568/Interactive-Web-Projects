@@ -1,0 +1,288 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image Overlay</title> 
+	<style> 
+		body { 
+			text-align: center; 
+		} 
+		
+		h1 { 
+			color: green; 
+		} 
+		
+		.container img { 
+			width: 250px; 
+			height: 250px; 
+		} 
+		
+		.container { 
+			position: relative; 
+			width: 400px; 
+			height: auto; 
+		} 
+		
+		.overlay { 
+			position: absolute; 
+			transition: all 0.3s ease; 
+			opacity: 0; 
+			background-color: #9bcd9b; 
+		} 
+		
+		.container:hover .overlay { 
+			opacity: 1; 
+		} 
+		
+		.overlayLeft{ 
+			height: 100%; 
+			width: 0; 
+			top: 0; 
+			left: 75px; 
+			background-color: #9bcd9b;; 
+		} 
+		
+		.container:hover .overlayLeft{ 
+		width: 250px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 class="title"> 
+	GeeksforGeeks 
+	</h1> 
+		<b>Image Overlay</b> 
+		<br> 
+		<br> 
+		<div class="container"> 
+			<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20200325132558/download311.png"
+				class="image"> 
+			<div class="overlay overlayLeft"></div> 
+		</div> 
+	</center> 
+</body> 
+
+</html>					 
+
+
+<!--<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image Overlay</title> 
+	<style> 
+		body { 
+			text-align: center; 
+		} 
+		
+		h1 { 
+			color: green; 
+		} 
+		
+		.container img { 
+			width: 250px; 
+			height: 250px; 
+		} 
+		
+		.container { 
+			position: relative; 
+			width: 400px; 
+			height: auto; 
+		} 
+		
+		.overlay { 
+			position: absolute; 
+			transition: all 0.3s ease; 
+			opacity: 0; 
+			background-color: #9bcd9b; 
+		} 
+		
+		.container:hover .overlay { 
+			opacity: 1; 
+		} 
+		
+		.overlayRight{ 
+			height: 100%; 
+			width: 0; 
+			top: 0; 
+			right: 75px; 
+			background-color: #9bcd9b;; 
+		} 
+		
+		.container:hover .overlayRight{ 
+		width: 250px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 class="title"> 
+	GeeksforGeeks 
+	</h1> 
+		<b>Image Overlay</b> 
+		<br> 
+		<br> 
+		<div class="container"> 
+			<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20200325132558/download311.png"
+				class="image"> 
+			<div class="overlay overlayRight"></div> 
+		</div> 
+	</center> 
+</body> 
+
+</html>					 
+-->
+
+
+
+
+<!--<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image Overlay</title> 
+	<style> 
+		body { 
+			text-align: center; 
+		} 
+		
+		h1 { 
+			color: green; 
+		} 
+		
+		.container img { 
+			width: 250px; 
+			height: 250px; 
+		} 
+		
+		.container { 
+			position: relative; 
+			width: 400px; 
+			height: auto; 
+		} 
+		
+		.overlay { 
+			position: absolute; 
+			transition: all 0.3s ease; 
+			opacity: 0; 
+			background-color: #9bcd9b; 
+		} 
+		
+		.container:hover .overlay { 
+			opacity: 1; 
+		} 
+		
+		.overlayTop{ 
+			width: 250px; 
+			height: 0; 
+			top: 0; 
+			right: 75px; 
+			background-color: #9bcd9b;; 
+		} 
+		
+		.container:hover .overlayTop{ 
+		height: 250px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 class="title"> 
+	GeeksforGeeks 
+	</h1> 
+		<b>Image Overlay</b> 
+		<br> 
+		<br> 
+		<div class="container"> 
+			<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20200325132558/download311.png"
+				class="image"> 
+			<div class="overlay overlayTop"></div> 
+		</div> 
+	</center> 
+</body> 
+
+</html>					 
+-->
+
+
+
+<!--<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<title>Image Overlay</title> 
+	<style> 
+		body { 
+			text-align: center; 
+		} 
+		
+		h1 { 
+			color: green; 
+		} 
+		
+		.container img { 
+			width: 250px; 
+			height: 250px; 
+		} 
+		
+		.container { 
+			position: relative; 
+			width: 400px; 
+			height: auto; 
+		} 
+		
+		.overlay { 
+			position: absolute; 
+			transition: all 0.3s ease; 
+			opacity: 0; 
+			background-color: #9bcd9b; 
+		} 
+		
+		.container:hover .overlay { 
+			opacity: 1; 
+		} 
+		
+		.overlayBottom{ 
+			width: 250px; 
+			height: 0; 
+			bottom: 0; 
+			right: 75px; 
+			background-color: #9bcd9b;; 
+		} 
+		
+		.container:hover .overlayBottom{ 
+		height: 255px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 class="title"> 
+	GeeksforGeeks 
+	</h1> 
+		<b>Image Overlay</b> 
+		<br> 
+		<br> 
+		<div class="container"> 
+			<img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20200325132558/download311.png"
+				class="image"> 
+			<div class="overlay overlayBottom"></div> 
+		</div> 
+	</center> 
+</body> 
+
+</html>	 
+-->

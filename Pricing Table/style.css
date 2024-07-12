@@ -1,0 +1,115 @@
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+	font-family: 'Poppins', sans-serif; 
+} 
+
+.container { 
+	width: 100%; 
+	min-height: 100vh; 
+	background: #fffaee; 
+} 
+
+.container h2 { 
+	color: #1d2d3f; 
+	font-size: 32px; 
+	padding: 15px 0 20px 0; 
+	text-align: left; 
+	margin-left: 10%; 
+} 
+
+.container h3 { 
+	margin: 0% 0 2% 10%; 
+	font-size: 24px; 
+	color: #0C356A; 
+} 
+
+.price-row { 
+	width: 81%; 
+	margin: auto; 
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+	grid-gap: 30px; 
+} 
+
+.price-col { 
+	transition: box-shadow .5s; 
+	transition: transform; 
+	background: #61677A; 
+	padding: 10% 10%; 
+	border-radius: 10px; 
+	color: #D8D9DA; 
+	text-align: center; 
+} 
+
+hr { 
+	padding: -10% !important; 
+} 
+
+.price-col:hover { 
+	box-shadow: 0 0 20px rgba(9, 157, 194, 0.2); 
+	transform: scale(1.04); 
+} 
+
+.price-col p { 
+	font-size: 22px; 
+} 
+
+.price-col h3 { 
+	color: whitesmoke; 
+	font-size: 44px; 
+	margin: 15px 0 20px; 
+	font-weight: 500; 
+} 
+
+.price-col h3 span { 
+	font-size: 25px; 
+} 
+
+.price-col ul { 
+	text-align: left; 
+	margin: 10px 0; 
+	color: #0C356A; 
+	list-style: none; 
+} 
+
+.price-col ul li { 
+	border-bottom: 2px solid #feffff; 
+	font-size: 20px; 
+	color: #ffffff; 
+	padding: 8px; 
+	text-align: left; 
+} 
+
+.price-col button { 
+	background-color: #EEE0C9; 
+	border: 1px solid white; 
+	border-radius: 5px; 
+	margin: 20px 0 0 0; 
+	color: #001c38; 
+	padding: 10px 25px; 
+	text-align: center; 
+	text-decoration: none; 
+	font-size: 18px; 
+} 
+
+.price-col button:hover { 
+	background: #091c23; 
+	color: white; 
+} 
+
+#best { 
+	background: #272829 !important; 
+} 
+
+p { 
+	font-size: 24px !important; 
+	margin-bottom: 10px; 
+	margin-top: -10px; 
+} 
+
+#prem { 
+	color: gold !important; 
+	text-shadow: 1px 1px gold; 
+}

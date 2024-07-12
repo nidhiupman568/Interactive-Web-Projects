@@ -1,0 +1,47 @@
+<!-- index.html -->
+
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content= 
+		"width=device-width, initial-scale=1.0"> 
+	<title>Design a Newsletter</title> 
+	<link rel="stylesheet" href="style.css"> 
+</head> 
+
+<body> 
+	<div class="container"> 
+		<div class="card"> 
+			<h2>Subscribe to GFG Newsletter</h2> 
+			<p>Be Updated with latest technologies</p> 
+			<form id="thanks" method="POST"> 
+				<input type="email" name="email"
+					id="email"
+					placeholder="Enter your email"
+					required> 
+				<button type="submit"> 
+					Subscribe 
+				</button> 
+			</form> 
+			
+			<p class="msg" id="congo"> 
+				Thanks for subscribing! 
+			</p> 
+		</div> 
+	</div> 
+
+	<script> 
+		const form = document.getElementById("thanks"); 
+		const successMessage = 
+			document.getElementById("congo"); 
+
+		form.addEventListener("submit", function (e) { 
+			e.preventDefault(); 
+			successMessage.style.display = "block"; 
+		}); 
+	</script> 
+</body> 
+
+</html>

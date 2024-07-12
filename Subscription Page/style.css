@@ -1,0 +1,69 @@
+/* style.css */
+body { 
+	font-family: Arial, sans-serif; 
+	background-color: #f2f2f2; 
+	margin: 0; 
+	padding: 0; 
+} 
+
+.card { 
+	background-color: #ffffff; 
+	border-radius: 10px; 
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4); 
+	padding: 50px; 
+	text-align: center; 
+	max-width: 400px; 
+} 
+
+.container { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: 100vh; 
+} 
+
+h2 { 
+	color: #36b75a; 
+	margin-bottom: 10px; 
+} 
+
+
+form { 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+} 
+
+p { 
+	color: #666; 
+} 
+
+.msg { 
+	display: none; 
+	color: green; 
+	margin-top: 40px; 
+} 
+
+
+input[type="email"] { 
+	width: 65%; 
+	padding: 12px; 
+	margin-bottom: 15px; 
+	border: 1px solid #ccc; 
+	border-radius: 7px; 
+} 
+
+button { 
+	background-color: crimson; 
+	color: #fff; 
+	padding: 10px 10px; 
+	margin-top: 5px; 
+	border: none; 
+	border-radius: 5px; 
+	cursor: pointer; 
+	transition: background-color 0.4s ease; 
+} 
+
+button:hover { 
+	background-color: #65686b; 
+}

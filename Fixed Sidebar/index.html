@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+          "width=device-width, initial-scale=1.0">
+    <title>Fixed Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgb(19, 179, 19);
+            color: white;
+            padding: 10px 20px;
+            position: relative;
+            width: 100%;
+            transition: top 0.3s;
+        }
+
+        header.fixed {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h3 {
+            color: green;
+        }
+
+        main {
+            padding: 20px;
+            height: 2000px;
+            background-color: #ccc6c6;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        Fixed Header
+    </header>
+    <main>
+        <h3>Welcome to GeeksForGeeks</h3>
+        <h4>Scroll down to see the fixed header in action.</h4>
+        <p>
+            GeeksforGeeks (GFG) is a computer science
+            portal founded by Sandeep Jain in 2009.
+            It started as a blog to share computer
+            science concepts and has grown into a
+            comprehensive platform for learning
+            and practicing coding. It is based in
+            Noida, Uttar Pradesh, India.
+        </p>
+        <p>Industry: E-Learning, EdTech Product,
+            Services and Operations: Provides a wide 
+            range of articles on various topics related to 
+            computer science and programming. Offers
+            practice problems and coding competitions 
+            for users to improve their coding skills.
+            Provides interview experiences and preparation
+            resources for tech job aspirants. Offers online
+            courses and tutorials on various tech topics.</p>
+        <p>
+            Funding Details: The company is privately
+            owned and does not disclose its financial details.
+            Acquisitions: No notable acquisitions. 
+            Awards and Achievements: Recognized as one
+            of the most popular computer science portals
+            in India.- Has a large user base of millions of
+            users worldwide. Please note that the information
+            provided is based on the available resources
+            and may not be 100% accurate.
+        </p>
+
+    </main>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
+        });
+    </script>
+</body>
+
+</html>
