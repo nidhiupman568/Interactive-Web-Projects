@@ -1,36 +1,309 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="style.css">
+    <title>Indian Flag with Animated Scenery - By Nidhi Upman</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+        .pole {
+            height: 600px;
+            width: 10px;
+            background: black;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .flag {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transform-origin: left center;
+            animation: wave 4s ease-in-out infinite;
+        }
+        .tricolor {
+            background: linear-gradient(#ff9933 33%, #fff 33%, #fff 66%, #138808 0);
+            display: grid;
+            place-items: center;
+        }
+        .wheel {
+            height: 60px;
+            width: 60px;
+            border: 1px solid darkblue;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto;
+            animation: chakra 2s linear infinite;
+        }
+        .wheel .line {
+            height: 100%;
+            width: 1px;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            background: darkblue;
+        }
+        .wave {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(45deg, 
+                            rgba(89, 72, 21, 0) 39%,
+                            rgba(250, 245, 245, 0.8474025974025974) 46%, 
+                            rgba(89, 72, 21, 0) 53%);
+            animation: waves 6s linear infinite;
+        }
+        .grass {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, darkgreen, limegreen 80%);
+            z-index: 1;
+        }
+        .grass::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(135deg, transparent 50%, limegreen 50%) 0 0 / 30px 30px repeat-x,
+                        linear-gradient(45deg, limegreen 50%, transparent 50%) 15px 0 / 30px 30px repeat-x;
+            animation: grassWave 2s linear infinite;
+        }
+        .balloon {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            border-radius: 50%;
+            animation: float 30s infinite linear;
+        }
+        .balloon::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            bottom: -4px;
+            left: 12px;
+            transform: rotate(45deg);
+        }
+        .bird {
+            position: absolute;
+            width: 30px;
+            height: 15px;
+            background: transparent;
+            animation: fly 15s linear infinite;
+            z-index: 10;
+        }
+        .bird::before,
+        .bird::after {
+            content: '';
+            position: absolute;
+            background: black;
+        }
+        .bird::before {
+            width: 20px;
+            height: 8px;
+            border-radius: 50% 50% 0 0;
+            top: 0;
+            left: 5px;
+        }
+        .bird::after {
+            width: 10px;
+            height: 4px;
+            border-radius: 50% 50% 0 0;
+            top: 8px;
+            left: 10px;
+            transform: rotate(-15deg);
+        }
+        .cloud {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            background: white;
+            border-radius: 15px;
+            animation: drift 20s linear infinite;
+        }
+        .cloud::before, .cloud::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+        .cloud::before {
+            width: 40px;
+            height: 40px;
+            top: -20px;
+            left: 10px;
+        }
+        .cloud::after {
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            right: 10px;
+        }
+        @keyframes chakra {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes wave {
+            0%, 100% { transform: perspective(600px) rotateY(0deg); }
+            25% { transform: perspective(600px) rotateY(10deg); }
+            50% { transform: perspective(600px) rotateY(-10deg); }
+            75% { transform: perspective(600px) rotateY(10deg); }
+        }
+        @keyframes waves {
+            0% { background-position: -400px 0px, -400px 0px, -400px 0px, -400px 0px; }
+            100% { background-position: 800px 0px, 800px 0px, 800px 0px, 800px 0px; }
+        }
+        @keyframes float {
+            0% {
+                transform: translate(var(--start-x), var(--start-y)) rotate(0deg);
+            }
+            25% {
+                transform: translate(calc(var(--start-x) + var(--x-amplitude)), calc(var(--start-y) + var(--y-amplitude))) rotate(90deg);
+            }
+            50% {
+                transform: translate(calc(var(--start-x) - var(--x-amplitude)), calc(var(--start-y) - var(--y-amplitude))) rotate(180deg);
+            }
+            75% {
+                transform: translate(calc(var(--start-x) + var(--x-amplitude)), calc(var(--start-y) - var(--y-amplitude))) rotate(270deg);
+            }
+            100% {
+                transform: translate(var(--start-x), var(--start-y)) rotate(360deg);
+            }
+        }
+        @keyframes grassWave {
+            0% { background-position: 0 0, 15px 0; }
+            100% { background-position: 30px 0, 45px 0; }
+        }
+        @keyframes fly {
+            0% { transform: translateX(-100px) translateY(var(--fly-y)) scale(0.5); }
+            100% { transform: translateX(calc(100vw + 100px)) translateY(var(--fly-y)) scale(0.5); }
+        }
+        @keyframes drift {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(-200px); }
+        }
+        .line:nth-child(1) { transform: rotate(15deg) }
+        .line:nth-child(2) { transform: rotate(30deg) }
+        .line:nth-child(3) { transform: rotate(45deg) }
+        .line:nth-child(4) { transform: rotate(60deg) }
+        .line:nth-child(5) { transform: rotate(75deg) }
+        .line:nth-child(6) { transform: rotate(90deg) }
+        .line:nth-child(7) { transform: rotate(105deg) }
+        .line:nth-child(8) { transform: rotate(120deg) }
+        .line:nth-child(9) { transform: rotate(135deg) }
+        .line:nth-child(10) { transform: rotate(150deg) }
+        .line:nth-child(11) { transform: rotate(165deg) }
+        .line:nth-child(12) { transform: rotate(180deg) }
+    </style>
 </head>
-<center>
-<div><h1>Indian Flag - By Nidhi Upman</h1></div>
 <body>
-	<div class="wrapper">
-		<div class="stick"></div>
-		<div class="flag">
-			<div class="wave"></div>
-			<div class="top"></div>
-			<div class="middle">
-				<div class="wheel">
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-				</div>
-			</div>
-			<div class="bottom"></div>
-		</div>
-	</div>
+	<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=1000&pause=800&color=C4641E&center=true&vCenter=true&width=435&lines=Wishing+everyone+a+very+Happy+;78th+Independence+Day!;Let's+celebrate+the+spirit+of++;freedom+and+unity.;-+By+Nidhi+Upman" alt="Typing SVG" /></a>
+    <div class="container">
+        <div class="pole"></div>
+        <div class="flag tricolor">
+            <div class="wave"></div>
+            <div class="wheel">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </div>
+    <div class="grass"></div>
+    <script>
+        const colors = ['#FF9933', '#FFFFFF', '#138808'];
+        const balloonContainer = document.body;
+
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            const startX = Math.random() * 100;
+            const startY = Math.random() * 100;
+            const xAmplitude = Math.random() * 50 + 25;
+            const yAmplitude = Math.random() * 50 + 25;
+
+            balloon.style.setProperty('--start-x', `${startX}vw`);
+            balloon.style.setProperty('--start-y', `${startY}vh`);
+            balloon.style.setProperty('--x-amplitude', `${xAmplitude}vw`);
+            balloon.style.setProperty('--y-amplitude', `${yAmplitude}vh`);
+            
+            balloon.style.left = `${startX}vw`;
+            balloon.style.top = `${startY}vh`;
+            
+            balloon.style.animationDuration = (Math.random() * 20 + 20) + 's';
+            balloon.style.animationDelay = (Math.random() * -30) + 's';
+            balloonContainer.appendChild(balloon);
+        }
+
+        function createBird() {
+            const bird = document.createElement('div');
+            bird.className = 'bird';
+            const flyHeight = Math.random() * 20 + 5; // Adjust this line to keep birds at the top
+            bird.style.setProperty('--fly-y', `${flyHeight}vh`);
+            bird.style.animationDuration = (Math.random() * 5 + 10) + 's';
+            bird.style.animationDelay = (Math.random() * -10) + 's';
+            balloonContainer.appendChild(bird);
+        }
+
+        function createCloud() {
+            const cloud = document.createElement('div');
+            cloud.className = 'cloud';
+            const driftHeight = Math.random() * 20 + 25; // Adjust this line to keep clouds below birds
+            cloud.style.top = `${driftHeight}vh`;
+            cloud.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            cloud.style.animationDelay = (Math.random() * -20) + 's';
+            balloonContainer.appendChild(cloud);
+        }
+
+        // Create 50 balloons
+        for (let i = 0; i < 100; i++) {
+            createBalloon();
+        }
+
+        // Create 15 birds
+        for (let i = 0; i < 30; i++) {
+            createBird();
+        }
+
+        // Create 5 clouds
+        for (let i = 0; i < 20; i++) {
+            createCloud();
+        }
+    </script>
 </body>
-</center>
 </html>
