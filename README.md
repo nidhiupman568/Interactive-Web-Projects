@@ -2,6 +2,8 @@
 
 🎉 Hi there! I'm thrilled to share my learning journey with **HTML** 📝, **CSS** 🎨, and **JavaScript** 💻. Starting from scratch, I've explored how these technologies work together to create beautiful and interactive web experiences. From building simple websites 🌐, and designing interactive games 🎮 to crafting responsive navigation bars 🧭 and animated buttons 🔲, I've dived into numerous projects. These skills have helped me transition to developing larger and more complex websites. 🚀
 
+Project Demo: https://nidhiupman568.github.io/Interactive-Web-Projects/
+
 ## 🚀 Projects Showcase 🚀
 
 ### 🌐 Website Components with 📸 Screenshots(Output) 📸 🌐
